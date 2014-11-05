@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文件大小：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRr-pH-3Bg">
+                                <rect key="frame" x="86" y="108" width="413" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="录音时长：" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfx-jm-mrE">
+                                <rect key="frame" x="86" y="165" width="413" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="状态：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuJ-Oj-dOu">
+                                <rect key="frame" x="86" y="267" width="413" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQu-2E-Se8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="显示文件大小" id="DmY-HE-bMO">
+                                        <connections>
+                                            <action selector="showFileSize:" destination="vXZ-lx-hvc" id="yqP-u9-UHF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="录音" id="0SX-5W-Opz">
+                                        <connections>
+                                            <action selector="recordStart:" destination="vXZ-lx-hvc" id="V1C-Do-bx3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="播放" id="6xy-n8-8bZ">
+                                        <connections>
+                                            <action selector="recordPlay:" destination="vXZ-lx-hvc" id="jyI-Na-xh2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="停止" id="etm-09-vnF">
+                                        <connections>
+                                            <action selector="recordStop:" destination="vXZ-lx-hvc" id="OF6-Lk-Juf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MQu-2E-Se8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="2MR-wg-VQR"/>
+                            <constraint firstItem="vRr-pH-3Bg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="88" id="971-dR-ajT"/>
+                            <constraint firstItem="MQu-2E-Se8" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="536" id="Eo3-nH-pVZ"/>
+                            <constraint firstItem="yfx-jm-mrE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="145" id="GYk-n5-vFa"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="MQu-2E-Se8" secondAttribute="bottom" constant="21" id="NWM-Hd-Kcw">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="vRr-pH-3Bg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="70" id="Ra1-SS-Gdm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vRr-pH-3Bg" secondAttribute="trailing" constant="85" id="Rj9-U4-nzu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IuJ-Oj-dOu" secondAttribute="trailing" constant="85" id="SxZ-f8-eVo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yfx-jm-mrE" secondAttribute="trailing" constant="85" id="XaT-0H-sCT"/>
+                            <constraint firstItem="yfx-jm-mrE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="70" id="d9e-Kb-2hL"/>
+                            <constraint firstItem="IuJ-Oj-dOu" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="247" id="jay-FQ-oCT"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yfx-jm-mrE" secondAttribute="bottom" constant="367" id="n8V-6R-gTE"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vRr-pH-3Bg" secondAttribute="bottom" constant="461" id="p7M-9G-kbS"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="IuJ-Oj-dOu" secondAttribute="bottom" constant="301" id="piK-ne-qgw"/>
+                            <constraint firstItem="IuJ-Oj-dOu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="70" id="sNG-Ez-AWS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MQu-2E-Se8" secondAttribute="trailing" constant="-16" id="wkm-VF-wIj"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="MQu-2E-Se8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2MR-wg-VQR"/>
+                                <exclude reference="Eo3-nH-pVZ"/>
+                                <exclude reference="wkm-VF-wIj"/>
+                                <exclude reference="NWM-Hd-Kcw"/>
+                                <exclude reference="n8V-6R-gTE"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="MQu-2E-Se8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2MR-wg-VQR"/>
+                                <include reference="Eo3-nH-pVZ"/>
+                                <include reference="wkm-VF-wIj"/>
+                                <include reference="NWM-Hd-Kcw"/>
+                                <include reference="n8V-6R-gTE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="consoleLabel" destination="IuJ-Oj-dOu" id="lSw-3T-wQT"/>
+                        <outlet property="fileSize" destination="yfx-jm-mrE" id="UWO-dw-FdI"/>
+                        <outlet property="playButton" destination="6xy-n8-8bZ" id="oIW-wH-o9m"/>
+                        <outlet property="recordButton" destination="0SX-5W-Opz" id="W7D-y2-JST"/>
+                        <outlet property="recordDuration" destination="vRr-pH-3Bg" id="BQZ-6O-U5O"/>
+                        <outlet property="stopButton" destination="etm-09-vnF" id="vpX-6v-ZJa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
